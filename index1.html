@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chilli Producers Limited | Malawi's Premier Exporter</title>
+    <meta name="description" content="Chilli Producers Limited is a premier, farmer-owned agribusiness enterprise based in Lilongwe, Malawi, specializing in premium chili products.">
+    <!-- Tailwind CSS for rapid UI development -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        chilli: {
+                            red: '#dc2626',
+                            darkred: '#b91c1c',
+                            green: '#16a34a',
+                            darkgreen: '#15803d',
+                            black: '#111827'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for background overlay */
+        .hero-bg {
+            background-image: linear-gradient(rgba(17, 24, 39, 0.7), rgba(17, 24, 39, 0.8)), url('https://images.unsplash.com/photo-1588144673673-81b373151b7d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .training-bg {
+            background-image: linear-gradient(rgba(22, 163, 74, 0.9), rgba(21, 128, 61, 0.9)), url('https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo Area -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="Logo_no_Background.png" alt="Chilli Producers Limited Logo" class="h-16 w-auto object-contain">
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm font-semibold text-gray-700 hover:text-chilli-red transition-colors">About Us</a>
+                    <a href="#products" class="text-sm font-semibold text-gray-700 hover:text-chilli-red transition-colors">Products</a>
+                    <a href="#training" class="text-sm font-semibold text-gray-700 hover:text-chilli-red transition-colors">Training Centre</a>
+                    <a href="#investors" class="text-sm font-semibold text-gray-700 hover:text-chilli-red transition-colors">Investors</a>
+                    <a href="#contact" class="bg-chilli-red text-white px-5 py-2.5 rounded-full font-bold text-sm hover:bg-chilli-darkred transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 duration-200">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-chilli-red focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-chilli-red hover:bg-gray-50">About Us</a>
+                <a href="#products" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-chilli-red hover:bg-gray-50">Products</a>
+                <a href="#training" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-chilli-red hover:bg-gray-50">Training Centre</a>
+                <a href="#investors" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-chilli-red hover:bg-gray-50">Investors</a>
+                <a href="#contact" class="block px-3 py-3 mt-4 text-center rounded-md text-base font-bold text-white bg-chilli-red hover:bg-chilli-darkred">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative hero-bg h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center md:text-left">
+            <div class="md:w-2/3">
+                <span class="inline-block py-1 px-3 rounded-full bg-chilli-red/20 text-red-400 font-semibold text-sm mb-4 border border-chilli-red/30 backdrop-blur-sm">
+                    Based in Lilongwe, Malawi
+                </span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
+                    Malawi’s Premier <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400">Agri-Processor</span> & Exporter
+                </h1>
+                <p class="text-xl text-gray-300 mb-10 max-w-2xl font-light leading-relaxed">
+                    A collaborative powerhouse of 100+ professional ABE farmers dedicated to producing, processing, and exporting world-class horticultural crops.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#products" class="bg-chilli-red text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-chilli-darkred transition-colors shadow-[0_0_20px_rgba(220,38,38,0.4)] flex items-center justify-center">
+                        Explore Our Products <i data-lucide="arrow-right" class="ml-2 h-5 w-5"></i>
+                    </a>
+                    <a href="#investors" class="bg-white/10 text-white backdrop-blur-md border border-white/20 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-colors flex items-center justify-center">
+                        Investor Relations
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-white/50 hover:text-white transition-colors">
+                <i data-lucide="chevron-down" class="h-8 w-8"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Key Metrics / Stats Bar -->
+    <div class="bg-white shadow-xl relative z-20 -mt-10 mx-4 md:mx-auto max-w-6xl rounded-2xl p-6 md:p-10 border border-gray-100">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="text-4xl font-black text-chilli-red mb-1">100+</div>
+                <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide">ABE Farmers</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-chilli-green mb-1">20ha</div>
+                <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Total Land Matrix</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-gray-800 mb-1">5ha</div>
+                <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Precision Irrigation</div>
+            </div>
+            <div>
+                <div class="text-4xl font-black text-gray-800 mb-1">2ha</div>
+                <div class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Greenhouse Setup</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1592982537447-6f29e160e34c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chilli Farmers in Field" class="rounded-2xl shadow-2xl z-10 relative">
+                        <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-chilli-green rounded-2xl -z-10"></div>
+                        <div class="absolute -top-6 -left-6 w-48 h-48 border-4 border-chilli-red/20 rounded-2xl -z-10"></div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-chilli-red font-bold tracking-wider uppercase text-sm mb-2">Our Story</h2>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">The Power of Collective Farming</h3>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Chilli Producers Limited is more than just a farm; it is a collaborative powerhouse. By merging the expertise of over 100 serious Agribusiness (ABE) farmers, we eliminate the fragmentation risks typical of smallholder agriculture.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Our 20-hectare commercial production matrix in Lilongwe is engineered to bypass seasonal volatility. With state-of-the-art greenhouse setups and precision drip irrigation, we guarantee a 365-day continuous supply of premium grade chili to international markets.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-3 rounded-lg text-chilli-red mr-4">
+                                <i data-lucide="shield-check" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Quality Guarantee</h4>
+                                <p class="text-sm text-gray-500 mt-1">Strict phytosanitary standards from seed to export shelf.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-lg text-chilli-green mr-4">
+                                <i data-lucide="leaf" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Year-Round Supply</h4>
+                                <p class="text-sm text-gray-500 mt-1">Climate-resilient infrastructure ensures zero off-seasons.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Value Addition -->
+    <section id="products" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-chilli-red font-bold tracking-wider uppercase text-sm mb-2">Product Portfolio</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">From Fresh Harvest to Premium Powders</h3>
+                <p class="text-lg text-gray-600">We dominate the value chain by capturing premium margins. Half of our yield serves the fresh market, while the rest is processed into high-demand, shelf-stable derivatives.</p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group border border-gray-100">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1599814144368-80b62e4975df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh Green Chilli" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-800">Fresh Market</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Premium Green Chilli</h4>
+                        <p class="text-sm text-gray-600 mb-4">Harvested at peak crispness, sorted, and cold-packed specifically for retail and hospitality off-takers.</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group border border-gray-100">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh Red Chilli" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-gray-800">Export Grade</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Premium Red Chilli</h4>
+                        <p class="text-sm text-gray-600 mb-4">Carefully selected for color intensity, high Capsaicin content, and uniformity to meet international metrics.</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group border border-chilli-red/20 relative">
+                    <div class="absolute -top-10 -right-10 bg-chilli-red/10 w-32 h-32 rounded-full blur-2xl"></div>
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chilli Powder" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-chilli-red text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">Value Added</div>
+                    </div>
+                    <div class="p-6 relative z-10">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Dehydrated Powders</h4>
+                        <p class="text-sm text-gray-600 mb-4">Finely milled red and green chili powders tailored for global spice blenders and food manufacturers.</p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300 group border border-gray-100">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1627308595171-d1b5d67129c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Chilli Flakes" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-chilli-red text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">Value Added</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Chilli Flakes & Crushes</h4>
+                        <p class="text-sm text-gray-600 mb-4">Coarsely crushed dried chilis, perfectly structured for fast-moving consumer goods (FMCG) packaging.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Centre Banner -->
+    <section id="training" class="relative training-bg py-24 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full mb-6 border border-white/30">
+                        <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+                        <span class="font-bold text-sm tracking-wide">Centre of Excellence</span>
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Empowering Malawi's Next Generation of Farmers</h2>
+                    <p class="text-lg text-green-50 mb-8 font-light">
+                        Sustainability relies on shared knowledge. Our Lilongwe facility operates as an active, hands-on incubator where our 100+ shareholders and the public master revolutionary horticultural practices.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-green-300 mr-3"></i>
+                            <span class="font-medium text-lg">Greenhouse & Climate Management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-green-300 mr-3"></i>
+                            <span class="font-medium text-lg">Drip Irrigation Setup & Optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle-2" class="h-6 w-6 text-green-300 mr-3"></i>
+                            <span class="font-medium text-lg">Export Phyto-Sanitary Compliance</span>
+                        </li>
+                    </ul>
+                    <button class="bg-white text-chilli-darkgreen px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg">
+                        View Training Calendar
+                    </button>
+                </div>
+                <div class="hidden lg:block relative">
+                    <!-- Stylized floating elements -->
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-chilli-green/40 rounded-full blur-2xl"></div>
+                    <img src="https://images.unsplash.com/photo-1530836369250-ef71a3f5e48c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Agricultural Training" class="rounded-2xl shadow-2xl border-4 border-white/20 transform rotate-2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investor Relations -->
+    <section id="investors" class="py-24 bg-chilli-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <i data-lucide="trending-up" class="h-12 w-12 text-chilli-red mx-auto mb-4"></i>
+                <h2 class="text-chilli-red font-bold tracking-wider uppercase text-sm mb-2">Investor & Partner Relations</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold mb-4">Built for Financial Durability</h3>
+                <p class="text-lg text-gray-400">Our model bypasses the "single-point-of-failure" typical of primary agriculture. With immediate value-addition capabilities, we protect margins against fresh market volatility.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-chilli-red/50 transition-colors">
+                    <div class="bg-gray-900 w-14 h-14 rounded-full flex items-center justify-center mb-6 text-chilli-red">
+                        <i data-lucide="bar-chart-3" class="h-7 w-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Strong EBITDA Pathway</h4>
+                    <p class="text-gray-400 text-sm">Robust 5-year financial models showing rapid return on CapEx investments via high-margin powdered exports.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-chilli-red/50 transition-colors">
+                    <div class="bg-gray-900 w-14 h-14 rounded-full flex items-center justify-center mb-6 text-chilli-red">
+                        <i data-lucide="globe-2" class="h-7 w-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Global Export Ready</h4>
+                    <p class="text-gray-400 text-sm">Capitalizing on SADC and EU trade agreements. Processed spices significantly lower shipping logistics costs.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-chilli-red/50 transition-colors">
+                    <div class="bg-gray-900 w-14 h-14 rounded-full flex items-center justify-center mb-6 text-chilli-red">
+                        <i data-lucide="users" class="h-7 w-7"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">ESG & Community Impact</h4>
+                    <p class="text-gray-400 text-sm">Directly empowering 100+ local farming families while creating permanent agro-processing jobs in Lilongwe.</p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <button class="bg-transparent border-2 border-chilli-red text-white px-8 py-3 rounded-full font-bold hover:bg-chilli-red transition-colors inline-flex items-center">
+                    <i data-lucide="download" class="h-5 w-5 mr-2"></i> Download Full Enterprise Budget PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Area -->
+    <section id="contact" class="bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2">
+                <!-- Form Side -->
+                <div class="p-8 md:p-16 lg:p-24">
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Whether you are an international off-taker, investor, or a farmer looking to join the training program, we want to hear from you.</p>
+                    
+                    <form class="space-y-6" onsubmit="event.preventDefault(); alert('Message sent successfully! (This is a frontend demo)');">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-chilli-red focus:ring-2 focus:ring-chilli-red/20 outline-none transition-all" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-chilli-red focus:ring-2 focus:ring-chilli-red/20 outline-none transition-all" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-chilli-red focus:ring-2 focus:ring-chilli-red/20 outline-none transition-all" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Nature of Inquiry</label>
+                            <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-chilli-red focus:ring-2 focus:ring-chilli-red/20 outline-none transition-all">
+                                <option>Bulk Export Order</option>
+                                <option>Investment & Finance</option>
+                                <option>Training Centre Enrollment</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-chilli-red focus:ring-2 focus:ring-chilli-red/20 outline-none transition-all" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-chilli-red text-white py-4 rounded-lg font-bold text-lg hover:bg-chilli-darkred transition-colors shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Info & Map Side -->
+                <div class="bg-gray-50 p-8 md:p-16 lg:p-24 border-l border-gray-100 flex flex-col justify-center">
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="bg-white p-3 rounded-full shadow-sm text-chilli-red mr-4">
+                                <i data-lucide="map-pin" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Headquarters & Farms</h4>
+                                <p class="text-gray-600 mt-1">Lilongwe Agri-Zone,<br>Lilongwe, Malawi</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white p-3 rounded-full shadow-sm text-chilli-red mr-4">
+                                <i data-lucide="phone" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Direct Contact</h4>
+                                <p class="text-gray-600 mt-1">+265 (0) 99 123 4567<br>+265 (0) 88 765 4321</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-white p-3 rounded-full shadow-sm text-chilli-red mr-4">
+                                <i data-lucide="mail" class="h-6 w-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Email Us</h4>
+                                <p class="text-gray-600 mt-1">exports@chilliproducers.mw<br>invest@chilliproducers.mw</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Placeholder for Map -->
+                    <div class="mt-12 w-full h-48 bg-gray-200 rounded-xl overflow-hidden relative border border-gray-300">
+                        <div class="absolute inset-0 flex items-center justify-center text-gray-500 flex-col">
+                            <i data-lucide="map" class="h-8 w-8 mb-2 opacity-50"></i>
+                            <span class="text-sm font-medium">Interactive Map (Lilongwe)</span>
+                        </div>
+                        <!-- Normally an iframe goes here -->
+                        <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Map View" class="w-full h-full object-cover opacity-20 grayscale mix-blend-multiply">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <i data-lucide="flame" class="h-6 w-6 text-chilli-red mr-2"></i>
+                    <span class="font-bold text-xl text-white tracking-tight uppercase">CHILLI <span class="text-sm font-normal text-gray-500">PRODUCERS LTD</span></span>
+                </div>
+                <div class="flex space-x-6 mb-6 md:mb-0">
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="linkedin" class="h-5 w-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="facebook" class="h-5 w-5"></i></a>
+                    <a href="#" class="hover:text-white transition-colors"><i data-lucide="youtube" class="h-5 w-5"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; 2026 Chilli Producers Limited. All rights reserved. Lilongwe, Malawi.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Trade Compliance</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md', 'bg-white/95');
+                nav.classList.remove('bg-white/50');
+            } else {
+                nav.classList.remove('shadow-md', 'bg-white/95');
+                nav.classList.add('bg-white/50');
+            }
+        });
+    </script>
+</body>
+</html>
